@@ -134,18 +134,21 @@
                     </div>
                     <div class="col-lg-8">
                         <h3 class="mb-2">Send us a message</h3>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <p class="mb-4">
+                            The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. 
+                            Just copy and paste the files, add a little code, and you're done.
+                        </p>
+                        <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
@@ -157,7 +160,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px" required></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -166,7 +169,9 @@
                                 </div>
                             </div>
                         </form>
+                        <div id="responseMessage" style="margin-top: 15px;"></div>
                     </div>
+                    
                     <div class="col-12">
                         <div class="rounded">
                             <iframe class="rounded w-100" 
@@ -317,6 +322,33 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+           <script>
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault(); // Prevent default form submission
+                    
+                        const formData = new FormData(this);
+                    
+                        fetch('process_contact.php', {
+                            method: 'POST',
+                            body: formData,
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            const responseMessage = document.getElementById('responseMessage');
+                            if (data.success) {
+                                responseMessage.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                            } else {
+                                responseMessage.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            document.getElementById('responseMessage').innerHTML = 
+                                `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
+                        });
+                    });
+                    </script>
     </body>
 
 </html>
