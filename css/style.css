@@ -1245,3 +1245,47 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+
+
+/*new design*/
+.navbar-brand {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    height: 50px; /* Adjust size */
+    width: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.main-name {
+    font-size: 1.5rem; /* Primary part size */
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.sub-name {
+    font-size: 0.9rem; /* Reduced size for the secondary part */
+    font-weight: bold;
+    color: #6c757d; /* Subtle color for secondary part */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .main-name {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .sub-name {
+        font-size: 0.8rem; /* Adjust secondary text for small screens */
+    }
+
+    .logo {
+        height: 40px; /* Adjust logo size */
+    }
+}
+
