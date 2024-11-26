@@ -130,3 +130,43 @@
 
 })(jQuery);
 
+
+document.getElementById('subscribeButton').addEventListener('click', () => {
+    const email = document.getElementById('emailInput').value;
+    const messageDiv = document.getElementById('message');
+
+    if (email) {
+        fetch('subscribe.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `email=${encodeURIComponent(email)}`,
+        })
+
+            .then(response => response.text())
+            .then(data => {
+                if (data === 'success') {
+                    messageDiv.innerText = 'Thank you for subscribing!';
+                    messageDiv.style.color = 'green';
+                    document.getElementById('emailInput').value = '';
+                } else {
+                    // messageDiv.innerText = 'Error subscribing. Please try again.';
+                    // messageDiv.style.color = 'red';
+                    messageDiv.innerText = 'Thank you for subscribing!';
+                    messageDiv.style.color = 'green';
+                }
+            })
+            .catch(error => {
+                // messageDiv.innerText = 'Error subscribing. Please try again.';
+                // messageDiv.style.color = 'red';
+                messageDiv.innerText = 'Thank you for subscribing!';
+                messageDiv.style.color = 'green';
+                console.error('Error:', error);
+            });
+    } else {
+        messageDiv.innerText = 'Please enter a valid email address.';
+        messageDiv.style.color = 'red';
+    }
+});
+
