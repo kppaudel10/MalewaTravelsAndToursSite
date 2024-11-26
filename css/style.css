@@ -1289,3 +1289,15 @@
     }
 }
 
+/* design for payments */
+
+.footer-bank-card a img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.footer-bank-card a img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
