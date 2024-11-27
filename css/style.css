@@ -1301,3 +1301,14 @@
 .footer-bank-card a img:hover {
     transform: scale(1.1); /* Zoom effect on hover */
 }
+.desc-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines initially */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.desc-content.expanded {
+    display: block; /* Expands to show full content */
+}
