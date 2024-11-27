@@ -170,15 +170,15 @@ document.getElementById('subscribeButton').addEventListener('click', () => {
     }
 });
 
-document.querySelectorAll('.read-more-toggle').forEach((btn) => {
-    btn.addEventListener('click', function () {
-        const content = this.previousElementSibling;
-        if (content.classList.contains('expanded')) {
-            content.classList.remove('expanded');
-            this.textContent = 'Read More';
-        } else {
-            content.classList.add('expanded');
-            this.textContent = 'Read Less';
-        }
-    });
-});
+// document.querySelectorAll('.read-more-toggle').forEach((btn) => {
+//     btn.addEventListener('click', function () {
+//         const content = this.previousElementSibling;
+//         if (content.classList.contains('expanded')) {
+//             content.classList.remove('expanded');
+//             this.textContent = 'Read More';
+//         } else {
+//             content.classList.add('expanded');
+//             this.textContent = 'Read Less';
+//         }
+//     });
+// });
