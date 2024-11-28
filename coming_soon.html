@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #13357B, #1C82AD);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        /* Glow Effect for "Coming Soon" */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+            }
+            to {
+                text-shadow: 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+            }
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .spinner {
+            margin-top: 30px;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Spinner Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Company Name -->
+    <h1>Malewa Travels and Tours</h1>
+
+    <!-- Coming Soon Message -->
+    <h2>Coming Soon</h2>
+    <p class="subtitle">We’re working hard to bring you something amazing.</p>
+
+    <!-- Loading Spinner -->
+    <div class="spinner"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Malewa Travels and Tours 2024. All Rights Reserved.
+    </div>
+
+    <script>
+        // Optional: You can add a smooth fade-in effect for the page content
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.style.opacity = 0;
+            let fadeEffect = setInterval(() => {
+                if (document.body.style.opacity < 1) {
+                    document.body.style.opacity = parseFloat(document.body.style.opacity) + 0.05;
+                } else {
+                    clearInterval(fadeEffect);
+                }
+            }, 50);
+        });
+    </script>
+</body>
+
+</html>
