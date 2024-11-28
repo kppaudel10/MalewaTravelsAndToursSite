@@ -56,6 +56,11 @@
             font-size: 1.2rem;
         }
 
+        .countdown {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
         .spinner {
             margin-top: 30px;
             width: 50px;
@@ -92,26 +97,42 @@
     <h2>Coming Soon</h2>
     <p class="subtitle">We’re working hard to bring you something amazing.</p>
 
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        Launching in: <span id="countdown-timer">00 Days 00:00:00</span>
+    </div>
+
     <!-- Loading Spinner -->
     <div class="spinner"></div>
 
     <!-- Footer -->
     <div class="footer">
-        © 2024 Malewa Travels and Tours 2024. All Rights Reserved.
+        © 2024 Malewa Travels and Tours. All Rights Reserved.
     </div>
 
     <script>
-        // Optional: You can add a smooth fade-in effect for the page content
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.style.opacity = 0;
-            let fadeEffect = setInterval(() => {
-                if (document.body.style.opacity < 1) {
-                    document.body.style.opacity = parseFloat(document.body.style.opacity) + 0.05;
-                } else {
-                    clearInterval(fadeEffect);
-                }
-            }, 50);
-        });
+        // Countdown Timer Script
+        const targetDate = new Date("2024-12-02T00:00:00").getTime();
+
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerText =
+                `${days} Days ${hours}:${minutes}:${seconds}`;
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("countdown-timer").innerText = "We are live!";
+            }
+        };
+
+        const timerInterval = setInterval(updateTimer, 1000);
     </script>
 </body>
 
