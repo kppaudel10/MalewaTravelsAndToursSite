@@ -76,12 +76,12 @@
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="services.html" class="nav-item nav-link">Services</a>
                     <a href="packages.html" class="nav-item nav-link">Packages</a>
+                    <a href="destination.html" class="nav-item nav-link">Destination</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
 
-        <!-- Carousel Start -->
         <!-- Carousel Start -->
         <div class="carousel-header">
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -352,7 +352,6 @@
         <!-- Services End -->
 
         <!-- Destination Start -->
-        <!-- Explore Tour Start -->
         <div class="container-fluid ExploreTour py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
@@ -380,11 +379,13 @@
 
                             <!-- Destination Card 2 -->
                             <div class="col-md-3 col-lg-3">
-                                <div class="destination-item">
-                                    <img src="img/peacePogada.jpeg" class="img-fluid w-100 rounded destination-img"
-                                        alt="Peace Pagoda">
-                                    <div class="destination-content text-center">
-                                        <h5 class="text-white text-uppercase mb-2">Peace Pagoda</h5>
+                                <div>
+                                    <div class="destination-item">
+                                        <img src="img/peacePogada.jpeg" class="img-fluid w-100 rounded destination-img"
+                                            alt="Peace Pagoda">
+                                        <div class="destination-content text-center">
+                                            <h5 class="text-white text-uppercase mb-2">Peace Pagoda</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -459,41 +460,56 @@
                 </div>
             </div>
         </div>
-        <!-- Explore Tour End -->
 
         <!-- Optional CSS -->
         <style>
+            /* Destination Zoom-In Hover Effect */
             .destination-item {
                 position: relative;
-            }
-
-            .destination-img {
-                object-fit: cover;
-                width: 100%;
-                height: 300px;
-                /* Adjust height as needed */
+                overflow: hidden;
                 border-radius: 10px;
             }
 
+            .destination-img {
+                transition: transform 0.5s ease;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .destination-item:hover .destination-img {
+                transform: scale(1.2);
+            }
+
+            /* Ensure text content remains unaffected by the zoom */
             .destination-content {
                 position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
                 width: 100%;
-                background-color: rgba(0, 0, 0, 0);
-                /* Transparent black background */
-                padding: 10px;
-                text-align: center;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+                padding: 20px;
+                background: rgba(0, 0, 0, .2);
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                transition: 0.5s;
+            }
+
+            .destination-item:hover .destination-content {
+                background: rgba(19, 53, 123, 0.6);
+                /* Dark overlay */
             }
 
             .destination-content h5 {
                 color: white;
                 font-size: 18px;
                 font-weight: bold;
+                margin: 0;
             }
 
-            /* Responsive adjustments */
+            /* Responsive adjustments for smaller screens */
             @media (max-width: 768px) {
                 .destination-img {
                     height: 250px;
@@ -577,6 +593,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

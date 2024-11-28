@@ -518,6 +518,10 @@
 .destination .tab-class .tab-content .destination-img:hover img {
     transform: scale(1.2);
 }
+
+.destination .tab-class .tab-content .destination-:hover .search-icon {
+    background: rgba(19, 53, 123, 0.4);
+}
 /*** Destination End ***/
 
 
@@ -541,7 +545,7 @@
     transition: 0.5s;
 }
 
-.packages .packages-item .packages-img::after {
+/* .packages .packages-item .packages-img::after {
     position: absolute;
     content: "";
     width: 0;
@@ -554,7 +558,7 @@
     visibility: hidden;
     transition: 0.7s;
     z-index: 3;
-}
+} */
 
 .packages .packages-item .packages-img:hover.packages-img::after {
     width: 100%;
