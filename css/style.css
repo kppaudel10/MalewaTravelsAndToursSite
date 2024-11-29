@@ -1,4 +1,3 @@
-
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -13,6 +12,7 @@
     visibility: visible;
     opacity: 1;
 }
+
 /*** Spinner End ***/
 
 .back-to-top {
@@ -146,9 +146,10 @@
 
 @media (max-width: 768px) {
     .topbar {
-        display: none;    
+        display: none;
     }
 }
+
 /*** Topbar End ***/
 
 
@@ -255,7 +256,7 @@
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
-    .navbar-light .navbar-nav .nav-link.active  {
+    .navbar-light .navbar-nav .nav-link.active {
         color: var(--bs-primary) !important;
     }
 
@@ -273,7 +274,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: var(--bs-light);
@@ -343,7 +344,7 @@
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    min-height: 100vh 
+    min-height: 100vh
 }
 
 .carousel-header .carousel-inner .carousel-item img {
@@ -353,7 +354,7 @@
     object-fit: cover;
 }
 
-.carousel-header .carousel-inner .carousel-item .carousel-caption  {
+.carousel-header .carousel-inner .carousel-item .carousel-caption {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -369,6 +370,7 @@
 }
 
 @media (max-width: 768px) {
+
     .carousel-header .carousel-inner .carousel-item img,
     .carousel-header .carousel-inner .carousel-item .carousel-caption {
         height: 700px;
@@ -383,12 +385,13 @@
     .carousel-header .carousel-control-next .carousel-control-next-icon {
         opacity: 0;
     }
-    
+
     .search-bar {
         margin-top: -100px;
         transition: 0.5s;
     }
 }
+
 /*** Carousel Hero Header End ***/
 
 
@@ -405,6 +408,7 @@
 .bg-breadcrumb .breadcrumb-item a {
     color: var(--bs-secondary) !important;
 }
+
 /*** Single Page Hero Header End ***/
 
 
@@ -426,6 +430,7 @@
     margin-right: -50px;
     border: 1px solid var(--bs-primary) !important;
 }
+
 /*** About End ***/
 
 
@@ -433,6 +438,7 @@
 .service .service-content-inner {
     transition: 0.5s;
 }
+
 .service .service-content-inner:hover {
     position: relative;
     background: var(--bs-primary) !important;
@@ -449,6 +455,7 @@
 .service .service-content-inner:hover .service-icon i {
     color: var(--bs-white) !important;
 }
+
 /*** Service End ***/
 
 
@@ -491,6 +498,7 @@
 .destination .tab-class .nav-item {
     padding: 0 0 20px 0;
 }
+
 .destination .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -522,6 +530,7 @@
 .destination .tab-class .tab-content .destination-:hover .search-icon {
     background: rgba(19, 53, 123, 0.4);
 }
+
 /*** Destination End ***/
 
 
@@ -589,15 +598,15 @@
 
 .packages .packages-item .packages-img .packages-price {
     position: absolute;
-    width: 100px; 
-    top: 0; 
-    left: 50%; 
+    width: 100px;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
     display: inline-block;
     background: var(--bs-primary);
     color: var(--bs-white);
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
     z-index: 5;
 }
 
@@ -641,6 +650,7 @@
 .packages .packages-carousel .owl-nav .owl-next:hover i {
     color: var(--bs-white);
 }
+
 /*** Packages End ***/
 
 
@@ -648,6 +658,7 @@
 .ExploreTour .tab-class .nav-item {
     padding: 0 0 20px 0;
 }
+
 .ExploreTour .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -810,6 +821,7 @@
     width: 40px;
     background: var(--bs-primary);
 }
+
 /*** Explore Tour End ***/
 
 
@@ -858,14 +870,16 @@
 
 .gallery .gallery-item:hover .gallery-content .gallery-info,
 .gallery .gallery-item:hover .gallery-plus-icon {
-   opacity: 1;
-   margin: 0;
+    opacity: 1;
+    margin: 0;
 }
 
 .gallery .gallery-item img {
-    width: 100%;       /* Ensures the image takes up the full width of the container */
-    height: 100%;      /* Ensures the image takes up the full height of the container */
-    object-fit: cover; 
+    width: 100%;
+    /* Ensures the image takes up the full width of the container */
+    height: 100%;
+    /* Ensures the image takes up the full height of the container */
+    object-fit: cover;
     transition: 0.5s;
 }
 
@@ -880,6 +894,7 @@
 .gallery .tab-class .nav-item {
     padding: 0 0 20px 0;
 }
+
 .gallery .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -897,7 +912,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
+
 }
 
 
@@ -939,8 +954,8 @@
 
 .guide .guide-item .guide-img .guide-icon {
     position: absolute;
-    bottom: 0; 
-    left: 50%; 
+    bottom: 0;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin-bottom: -50px;
     display: flex;
@@ -977,6 +992,7 @@
 .guide .guide-item .guide-img-efects img {
     transition: 0.5s;
 }
+
 .guide .guide-item:hover .guide-img-efects img {
     transform: scale(1.1);
 }
@@ -1019,6 +1035,7 @@
 .guide .guide-item:hover .guide-title .guide-title-inner h4 {
     color: var(--bs-white);
 }
+
 /*** Travel Guide End ***/
 
 
@@ -1087,6 +1104,7 @@
 .blog .blog-item .blog-img:hover .blog-img-inner img {
     transform: scale(1.2);
 }
+
 /*** Blog End ***/
 
 /*** Testimonial Start ***/
@@ -1096,11 +1114,12 @@
 
 .testimonial .testimonial-carousel .testimonial-item .testimonial-img {
     position: relative;
-    width: 100px; 
-    height: 100px; 
-    top: 0; left: 50%; 
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid var(--bs-primary); 
+    border: 3px solid var(--bs-primary);
     border-style: dotted;
     border-radius: 50%;
 }
@@ -1173,10 +1192,11 @@
 }
 
 .testimonial .testimonial-carousel .owl-item.center .testimonial-item .testimonial-img {
-    border: 3px solid var(--bs-white); 
+    border: 3px solid var(--bs-white);
     border-style: dotted;
     transition: 0.5s;
 }
+
 /*** Testimonial End ***/
 
 /*** Contact Start ***/
@@ -1188,6 +1208,7 @@
     box-shadow: inset 1000px 0 0 0 var(--bs-light) !important;
     color: var(--bs-primary) !important;
 }
+
 /*** Contact End ***/
 
 /*** Subscribe Start ***/
@@ -1227,12 +1248,14 @@
     margin-left: -50px;
     border: 1px solid var(--bs-white) !important;
 }
+
 /*** Subscribe End ***/
 
 /*** Footer Start ***/
 .footer {
     background: var(--bs-dark);
 }
+
 .footer .footer-item a {
     line-height: 30px;
     color: var(--bs-white);
@@ -1251,6 +1274,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--bs-dark) !important;
 }
+
 /*** copyright end ***/
 
 
@@ -1261,38 +1285,112 @@
     color: inherit;
 }
 
-.logo {
-    height: 50px; /* Adjust size */
-    width: auto;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
 .main-name {
-    font-size: 1.5rem; /* Primary part size */
+    font-size: 1.5rem;
+    /* Primary part size */
     font-weight: bold;
     margin: 0;
     white-space: nowrap;
+    color: #ffffff;
+    /* Base text color */
+    text-shadow:
+        0 0 5px #ffffff,
+        /* Soft glow */
+        0 0 10px #ffffff,
+        /* Softer glow */
+        0 0 20px #ff00ff,
+        /* Stronger pink glow */
+        0 0 30px #ff00ff,
+        /* Stronger pink glow */
+        0 0 40px #ff00ff,
+        /* Even more glowing */
+        0 0 50px #ff00ff,
+        /* Maximum glowing */
+        0 0 75px #ff00ff;
+    /* Larger glowing radius */
+    animation: glow 1.5s infinite alternate;
+    /* Animation for glowing */
 }
 
 .sub-name {
-    font-size: 0.9rem; /* Reduced size for the secondary part */
+    font-size: 0.9rem;
+    /* Reduced size for the secondary part */
     font-weight: bold;
-    color: #6c757d; /* Subtle color for secondary part */
+    color: #ffffff;
+    /* Base text color */
+    text-shadow:
+        0 0 3px #ffffff,
+        /* Softer glow */
+        0 0 8px #00ffff,
+        /* Blue glow */
+        0 0 15px #00ffff,
+        /* More intense blue glow */
+        0 0 20px #00ffff;
+    /* Slightly more glowing blue */
+    animation: glow 2s infinite alternate;
+    /* Animation for glowing */
     margin: 0;
+    padding-left: 1.5em;
+    /* Indentation for tab-like space */
 }
+
+/* Glow effect for the logo */
+.logo {
+    max-width: 100px;
+    /* Control logo size */
+    height: auto;
+    /* Maintain aspect ratio */
+    filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 20px #ff00ff);
+    /* Glowing effect */
+    transition: filter 0.3s ease-in-out;
+    /* Smooth transition for filter */
+}
+
+/* Hover effect on logo */
+.logo:hover {
+    filter: drop-shadow(0 0 15px #ffffff) drop-shadow(0 0 30px #ff00ff);
+}
+
+/* Animation for glowing text */
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #ffffff,
+            0 0 15px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 25px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 35px #ff00ff;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px #ffffff,
+            0 0 20px #ffffff,
+            0 0 30px #ff00ff,
+            0 0 40px #ff00ff,
+            0 0 50px #ff00ff,
+            0 0 60px #ff00ff,
+            0 0 70px #ff00ff;
+    }
+}
+
 
 @media (max-width: 768px) {
     .main-name {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-size: 1.2rem;
+        /* Adjust font size for smaller screens */
     }
 
     .sub-name {
-        font-size: 0.8rem; /* Adjust secondary text for small screens */
+        font-size: 0.8rem;
+        /* Adjust secondary text for small screens */
     }
 
     .logo {
-        height: 40px; /* Adjust logo size */
+        height: 40px;
+        /* Adjust logo size */
     }
 }
 
@@ -1306,16 +1404,20 @@
 }
 
 .footer-bank-card a img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1);
+    /* Zoom effect on hover */
 }
+
 .desc-content {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Limit to 3 lines initially */
+    -webkit-line-clamp: 3;
+    /* Limit to 3 lines initially */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .desc-content.expanded {
-    display: block; /* Expands to show full content */
+    display: block;
+    /* Expands to show full content */
 }
