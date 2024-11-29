@@ -832,7 +832,7 @@
     bottom: 0;
     left: 0;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -863,7 +863,10 @@
 }
 
 .gallery .gallery-item img {
-    transition: 0.5s;
+    width: 100%;       /* Ensures the image takes up the full width of the container */
+    height: 100%;      /* Ensures the image takes up the full height of the container */
+    object-fit: cover; 
+    /* transition: 0.5s; */
 }
 
 .gallery .gallery-item:hover img {
