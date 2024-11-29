@@ -866,7 +866,7 @@
     width: 100%;       /* Ensures the image takes up the full width of the container */
     height: 100%;      /* Ensures the image takes up the full height of the container */
     object-fit: cover; 
-    /* transition: 0.5s; */
+    transition: 0.5s;
 }
 
 .gallery .gallery-item:hover img {
