@@ -163,12 +163,21 @@ document.getElementById("subscribeButton").addEventListener("click", () => {
 });
 
 const currentPath = window.location.pathname;
+// Initialize a flag to track if an active tab is set
+let activeTabSet = false;
 
-// Highlight the active tab based on the current URL
+// Loop through all navigation links
 document.querySelectorAll(".nav-item.nav-link").forEach((link) => {
+  // If the link matches the current path, set it as active
   if (link.href.includes(currentPath)) {
     link.classList.add("active");
+    activeTabSet = true; // Mark that an active tab is set
   } else {
     link.classList.remove("active");
   }
 });
+
+// If no active tab is set, make the Home tab active by default
+if (!activeTabSet) {
+  document.getElementById("home-tab").classList.add("active");
+}
