@@ -21,6 +21,7 @@ window.location.reload(true);
       $(".navbar").removeClass("sticky-top shadow-sm");
     }
   });
+  
 
   // International Tour carousel
   $(".InternationalTour-carousel").owlCarousel({
