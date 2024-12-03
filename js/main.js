@@ -162,14 +162,19 @@ document.getElementById("subscribeButton").addEventListener("click", () => {
   }
 });
 
-const currentPath = window.location.pathname;
-// Initialize a flag to track if an active tab is set
+// Get the current page's URL path (normalized)
+const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
+
+// Flag to track if an active tab is set
 let activeTabSet = false;
 
-// Loop through all navigation links
+// Loop through all navigation linkss
 document.querySelectorAll(".nav-item.nav-link").forEach((link) => {
+  // Normalize the link's href to compare it with currentPath
+  const linkPath = new URL(link.href).pathname.replace(/\/$/, "").toLowerCase();
+
   // If the link matches the current path, set it as active
-  if (link.href.includes(currentPath)) {
+  if (linkPath === currentPath) {
     link.classList.add("active");
     activeTabSet = true; // Mark that an active tab is set
   } else {
