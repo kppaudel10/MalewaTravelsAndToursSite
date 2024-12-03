@@ -165,14 +165,20 @@ document.getElementById("subscribeButton").addEventListener("click", () => {
 // Get the current page's URL path
 const currentPath = window.location.pathname;
 
+// Normalize the currentPath by removing trailing slashes
+const normalizedPath = currentPath.endsWith("/") ? currentPath.slice(0, -1) : currentPath;
+
 // Initialize a flag to track if an active tab is set
 let activeTabSet = false;
 
 // Loop through all navigation links
 document.querySelectorAll(".nav-item.nav-link").forEach((link) => {
-  // Check if the currentPath matches exactly with the href of the link
-  const linkPath = new URL(link.href).pathname; // Get the pathname of the link
-  if (linkPath === currentPath) {
+  // Get the pathname of the link and normalize it
+  const linkPath = new URL(link.href).pathname;
+  const normalizedLinkPath = linkPath.endsWith("/") ? linkPath.slice(0, -1) : linkPath;
+
+  // Compare normalized paths
+  if (normalizedLinkPath === normalizedPath) {
     link.classList.add("active");
     activeTabSet = true; // Mark that an active tab is set
   } else {
