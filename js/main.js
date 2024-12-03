@@ -1,5 +1,3 @@
-window.location.reload(true);
-
 (function ($) {
   "use strict";
 
